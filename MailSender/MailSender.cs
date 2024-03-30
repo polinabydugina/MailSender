@@ -62,7 +62,7 @@ namespace MailSender
                     await smtpClient.SendMailAsync(message);
                     Application.Current.Dispatcher.Invoke(() =>
                     {
-                        MailCodeWindow mailCodeWindow = new MailCodeWindow(code.ToString());
+                        MailCodeWindow mailCodeWindow = new MailCodeWindow("", Convert.ToString(code));
                         mailCodeWindow.Show();
                     });
                 }

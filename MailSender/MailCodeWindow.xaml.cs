@@ -19,11 +19,25 @@ namespace MailSender
     /// </summary>
     public partial class MailCodeWindow : Window
     {
-        public MailCodeWindow(string msg)
+        string code;
+        public MailCodeWindow(string msg, string code)
         {
             InitializeComponent();
-
+            this.code = code;
             CodeTB.Text = msg;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(CodeTB.Text == code)
+            {
+                MessageBox.Show("Success!");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Wrong code");
+            }
         }
     }
 }

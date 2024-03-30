@@ -18,5 +18,6 @@
                  BorderBrush="LightGray" 
                  BorderThickness="3" 
                  Background="Transparent"/>
+        <Button Content="Done" Click="Button_Click"/>
     </StackPanel>
 </Window>
